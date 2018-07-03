@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/test/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>{{ obj.user.label }}{{ obj.user }}</p>
+        <p>{{ obj.age.label }}{{ obj.age }}</p>
+        <p>{{ obj.email.label }}{{ obj.email }}</p>
+        <p>{{ obj.img.label }}{{ obj.img }}</p>
+        <p><input type="submit" value="提交">提交</p>
+    </form>
+
+</body>
+</html>
