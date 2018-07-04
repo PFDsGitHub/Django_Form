@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, HttpResponse
 from django import forms
 from django.forms import fields
 from django.forms import widgets
 from app01 import models
+import json
 
 
 class TestForm(forms.Form):
@@ -70,8 +71,60 @@ class LoveForm(forms.Form):
         super(LoveForm, self).__init__(*args,**kwargs)
         self.fields['user_id'].widget.choices = models.UserInfo.objects.values_list('id','username')
 
-
 def love(request):
     obj = LoveForm()
 
     return render(request, 'love.html', {'obj':obj})
+
+
+# 基于源码扩展
+from django.core.exceptions import ValidationError
+class AjaxForm(forms.Form):
+    username = fields.CharField()
+    user_id = fields.IntegerField(
+        widget=widgets.Select(choices=[(0,'alex'),(1,'yuan'),(2,'egon'),])
+    )
+    # 自定义方法  clean_字段名
+    # 必须返回值  self.cleaned_data['username']
+    # 如果出错  raise ValidationError('用户名已存在')
+    # 单独字段验证
+    def clean_username(self):
+        v = self.cleaned_data['username']
+        if models.UserInfo.objects.filter(username=v).count():
+            # 整体错了
+            # 自己详细错误信息
+            raise ValidationError('用户名已存在')
+        return v
+
+    # 单独字段验证
+    def clean_user_id(self):
+        return self.cleaned_data['user_id']
+
+    # 整体验证
+    def clean(self):
+        value_dict = self.cleaned_data
+        v1 = value_dict.get('username')
+        v2 = value_dict.get('user_id')
+        if v1 == 'root' and v2 == 1:
+            raise ValidationError('整体错误信息')
+        return self.cleaned_data
+
+
+def ajax(request):
+    if request.method == 'GET':
+        obj = AjaxForm()
+        return render(request, 'ajax.html', {'obj':obj})
+    else:
+        ret = {'status':None, 'message':None}
+        obj = AjaxForm(request.POST)
+        if obj.is_valid():
+            print(obj.cleaned_data)
+            # 跳转到百度
+            ret['status'] = '钱'
+            return HttpResponse(json.dumps(ret))
+        else:
+            print(obj.errors)
+            # 错误信息显示到前端页面上
+            ret['message'] = obj.errors
+            return HttpResponse(json.dumps(ret))
+

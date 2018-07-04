@@ -27,6 +27,7 @@ urlpatterns = [
 
     url(r'^test/', v2.test),
     url(r'^love/', v2.love),
+    url(r'^ajax/', v2.ajax),
 
 
 ]
