@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^edit_user-(\d+)/', views.edit_user),
 
     url(r'^test/', v2.test),
+    url(r'^love/', v2.love),
 
 
 ]
