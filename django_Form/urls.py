@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import url
 from app01 import views
 from app02 import views as v2
+from app03 import views as v3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +29,9 @@ urlpatterns = [
     url(r'^test/', v2.test),
     url(r'^love/', v2.love),
     url(r'^ajax/', v2.ajax),
+
+    url(r'^serialize/', v3.serialize),
+    url(r'^get_data/', v3.get_data),
 
 
 ]
