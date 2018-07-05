@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40b59ac1-30ed-4df8-8f65-2d5d1b861d2e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app03/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app03/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/get_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/serialize.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_Form/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_Form/urls.py" afterDir="false" />
     </list>
@@ -62,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app03/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            <state relative-caret-position="216">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -83,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serialize.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="serialize.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/serialize.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="405">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -158,7 +167,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="696" />
     <option name="width" value="744" />
     <option name="height" value="860" />
@@ -285,7 +294,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="696" y="0" width="744" height="860" extended-state="1" />
+    <frame x="696" y="0" width="744" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -517,6 +526,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/serialize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/get_data.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -526,18 +542,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app03/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="216">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/serialize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
